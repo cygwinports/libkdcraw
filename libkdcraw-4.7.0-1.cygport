@@ -1,0 +1,7 @@
+inherit kde4
+
+
+PKG_NAMES="libkdcraw20 libkdcraw-common libkdcraw-devel"
+libkdcraw20_CONTENTS="usr/bin/cygkdcraw-20.dll"
+libkdcraw_common_CONTENTS="etc/postinstall/ usr/share/"
+libkdcraw_devel_CONTENTS="usr/include/ usr/lib/"
