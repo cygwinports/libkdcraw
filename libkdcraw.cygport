@@ -1,0 +1,14 @@
+inherit kde4
+
+NAME="libkdcraw"
+VERSION=4.10.5
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="KDE4 RAW graphics library"
+
+PKG_NAMES="libkdcraw22 libkdcraw-common libkdcraw-devel"
+libkdcraw22_REQUIRES="libkdcraw-common"
+libkdcraw22_CONTENTS="usr/bin/cygkdcraw-22.dll"
+libkdcraw_common_CONTENTS="etc/postinstall/ usr/share/"
+libkdcraw_devel_REQUIRES="libkdecore-devel libQtCore4-devel libQtGui4-devel"
+libkdcraw_devel_CONTENTS="usr/include/ usr/lib/"

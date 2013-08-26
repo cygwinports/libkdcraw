@@ -1,5 +1,0 @@
-category: Graphics KDE
-requires: libkdcraw20 libkdecore5-devel libQtCore4-devel libQtGui4-devel
-external-source: libkdcraw
-sdesc: "KDE4 RAW graphics library (development)"
-ldesc: "KDE graphics suite"
