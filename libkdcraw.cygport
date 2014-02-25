@@ -1,10 +1,14 @@
 inherit kde4
 
 NAME="libkdcraw"
-VERSION=4.10.5
+VERSION=4.11.5
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="KDE4 RAW graphics library"
+
+PATCH_URI="
+	http://pkgs.fedoraproject.org/cgit/libkdcraw.git/plain/libkdcraw-4.10.90-external-libraw.patch?h=f19
+"
 
 PKG_NAMES="libkdcraw22 libkdcraw-common libkdcraw-devel"
 libkdcraw22_REQUIRES="libkdcraw-common"
@@ -12,3 +16,8 @@ libkdcraw22_CONTENTS="usr/bin/cygkdcraw-22.dll"
 libkdcraw_common_CONTENTS="etc/postinstall/ usr/share/"
 libkdcraw_devel_REQUIRES="libkdecore-devel libQtCore4-devel libQtGui4-devel"
 libkdcraw_devel_CONTENTS="usr/include/ usr/lib/"
+
+CYGPORT_USE_UNSTABLE_API=1
+src_unpack_hook() {
+	rm -fr libraw
+}
