@@ -1,0 +1,18 @@
+In file included from /usr/include/libraw/libraw.h:40:0,
+		 from libkdcraw/kdcraw_p.h:39,
+		 from libkdcraw/kdcraw.cpp:31:
+/usr/include/libraw/libraw_datastream.h: In member function ‘virtual int LibRaw_buffer_datastream::get_char()’:
+/usr/include/libraw/libraw_datastream.h:154:17: error: exception handling disabled, use -fexceptions to enable
+	   throw LIBRAW_EXCEPTION_IO_EOF;
+	         ^
+
+--- origsrc/libkdcraw-15.04.3/CMakeLists.txt	2014-11-20 03:49:01.000000000 -0600
++++ src/libkdcraw-15.04.3/CMakeLists.txt	2015-09-17 20:43:04.503248700 -0500
+@@ -42,6 +42,7 @@ endif()
+ add_definitions(${QT_DEFINITIONS}
+                 ${QT_QTDBUS_DEFINITIONS}
+                 ${KDE4_DEFINITIONS}
++                ${KDE4_ENABLE_EXCEPTIONS}
+                 ${LibRaw_r_DEFINITIONS}
+                )
+ 

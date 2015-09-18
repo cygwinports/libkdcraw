@@ -1,10 +1,12 @@
 inherit kde4
 
 NAME="libkdcraw"
-VERSION=14.12.3
+VERSION=15.04.3
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="KDE4 RAW graphics library"
+
+PATCH_URI="15.04.3-fexceptions.patch"
 
 PKG_NAMES="libkdcraw23 libkdcraw-common libkdcraw-devel"
 libkdcraw23_REQUIRES="libkdcraw-common"
