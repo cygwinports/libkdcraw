@@ -1,7 +1,7 @@
 inherit kde4
 
 NAME="libkdcraw"
-VERSION=15.04.3
+VERSION=15.08.3
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="KDE4 RAW graphics library"
